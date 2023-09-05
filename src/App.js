@@ -1,5 +1,6 @@
 import "./components/UI/Card.css";
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 function App() {
   const expense = [
@@ -24,7 +25,12 @@ function App() {
     },
   ];
 
-  return <Expenses expense={expense} />;
+  return (
+    <div>
+      <NewExpense />
+      <Expenses expense={expense} />;
+    </div>
+  );
 }
 
 export default App;
