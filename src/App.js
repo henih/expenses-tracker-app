@@ -1,4 +1,5 @@
-import ExpenseItem from "./components/ExpenseItem";
+import "./components/Card.css";
+import Expenses from "./components/Expenses";
 
 function App() {
   const expense = [
@@ -23,14 +24,7 @@ function App() {
     },
   ];
 
-  return (
-    <div>
-      <ExpenseItem expense={expense[0]} />
-      <ExpenseItem expense={expense[1]} />
-      <ExpenseItem expense={expense[2]} />
-      <ExpenseItem expense={expense[3]} />
-    </div>
-  );
+  return <Expenses expense={expense} />;
 }
 
 export default App;
