@@ -25,10 +25,17 @@ function App() {
     },
   ];
 
+  // 4. Receives expense parameter from NewExpense.js through the pointer function of addExpenseHandler
+    function addExpenseHandler(expense) {
+    console.log("In app. js");
+    console.log(expense);
+  }
+
+
   return (
     <div>
-      <NewExpense />
-      <Expenses expense={expense} />;
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <Expenses expense={expense} />
     </div>
   );
 }
