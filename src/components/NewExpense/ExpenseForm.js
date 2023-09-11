@@ -43,19 +43,19 @@ export default function ExpenseForm(props) {
       }
     }
 
-// Combine all the inputs in 1 function that gets called once the form is submitted
+    // Combine all the inputs in 1 function that gets called once the form is submitted
     function submitHandler(event) {
       event.preventDefault();
 
       const expenseData = {
         title: enteredTitle,
-        amount: enteredAmount,
+        amount: +enteredAmount,
         date: new Date(enteredDate),
       };
 
-// 2. Receives props from NewExpense.js and executes onSaveExpenseData function and sends expenseData to NewExpense.js as an argument and that's the value we receive as a parameter in NewExpense as enteredExpenseData
+      // 2. Receives props from NewExpense.js and executes onSaveExpenseData function and sends expenseData to NewExpense.js as an argument and that's the value we receive as a parameter in NewExpense as enteredExpenseData
       props.onSaveExpenseData(expenseData);
- // Two way binding - Once the form is submitted, the value of the form is resetted to the initial state
+      // Two way binding - Once the form is submitted, the value of the form is resetted to the initial state
       setEnteredTitle("");
       setEnteredAmount("");
       setEnteredDate("");
