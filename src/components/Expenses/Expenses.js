@@ -28,7 +28,9 @@ export default function Expenses(props) {
           onChangeExpenseFilter={expenseFilterHandler}
         />
         {filteredExpenses.length === 0 ? (
-          <p>No expenses found for the selected year.</p>
+          <p className="error-message">
+            No expenses found for the selected year.
+          </p>
         ) : (
           filteredExpenses.map((expense) => (
             <ExpenseItem
