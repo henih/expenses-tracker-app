@@ -12,7 +12,7 @@ export default function ChartBar(props) {
       <div className="chart-bar__inner">
         <div
           className="chart-bar__fill"
-          style={{ height: barFillHeight }}
+          style={{ height: barFillHeight }} // Style wants an object as a value / key name is property and value is value
         ></div>
       </div>
       <div className="chart-bar__label">{props.label}</div>
